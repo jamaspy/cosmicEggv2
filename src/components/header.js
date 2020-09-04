@@ -1,22 +1,22 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { Link } from "gatsby";
 import React, { useState } from "react";
-
+import { menuOptions } from "../data/menu";
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+  // const { site } = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `);
 
   return (
-    <header className="bg-teal-700">
+    <header className="bg-transparent z-50 absolute">
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
-        <Link to="/">
+        {/* <Link to="/">
           <h1 className="flex items-center text-white no-underline">
             <svg
               className="w-8 h-8 mr-2 fill-current"
@@ -31,10 +31,10 @@ function Header() {
               {site.siteMetadata.title}
             </span>
           </h1>
-        </Link>
+        </Link> */}
 
         <button
-          className="items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className="items-center block px-3 py-2 text-white border border-white rounded md:hidden transition-all duration-500 ease-in-out"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
@@ -49,23 +49,14 @@ function Header() {
 
         <nav
           className={`${
-            isExpanded ? `block` : `hidden`
-          } md:block md:items-center w-full md:w-auto`}
+            isExpanded ? `block ml-auto` : `hidden`
+          } md:block md:items-center w-full md:w-auto transition-all duration-500 ease-in-out`}
         >
-          {[
-            {
-              route: `/about`,
-              title: `About`,
-            },
-            {
-              route: `/contact`,
-              title: `Contact`,
-            },
-          ].map((link) => (
+          {menuOptions.map((link) => (
             <Link
-              className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+              className="block mt-4 font-montserrat font-light text-white no-underline md:inline-block md:mt-0 md:ml-6 hover:text-red-500 "
               key={link.title}
-              to={link.route}
+              to={link.slug}
             >
               {link.title}
             </Link>
