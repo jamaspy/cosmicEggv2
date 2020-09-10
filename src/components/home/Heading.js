@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby";
 const Heading = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { name: { eq: "HOMEPAGE_BANNER_Cropped" } }) {
+      allFile(filter: { name: { eq: "HOME_BANNER" } }) {
         nodes {
           name
           childImageSharp {

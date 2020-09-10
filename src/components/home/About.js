@@ -3,17 +3,17 @@ import StyledTitle from "../styledComponents/StyledTitle";
 import Video from "../video/video";
 const About = () => {
   return (
-    <div className="bg-gray-100">
+    <div>
       <StyledTitle title="About" subtitle="Us" />
-      <div className="flex flex-col items-center md:flex-row p-12">
-        <div className="w-2/3 md:w-1/3 shadow-2xl">
+      <div className="flex flex-col items-center md:flex-row border">
+        <div className="md:w-1/2 w-1/2 shadow-2xl p-4">
           <Video
             videoSrcURL="https://stream.mux.com/AXqCdIllYWKsXcK1QFB00ly2u00iX7GAYnpoDWwOC0267I.m3u8"
             posterImage="https://image.mux.com/AXqCdIllYWKsXcK1QFB00ly2u00iX7GAYnpoDWwOC0267I/thumbnail.png?time=9"
             videoID="Home Page Sizzle"
           />
         </div>
-        <div className="md:w-2/3 md:mr-8 font-montserrat font-light ">
+        <div className="md:w-1/2 font-montserrat font-light border p-4 text-justify">
           <p className="font-montserrat font-light">
             RevelWell is your dedicated online wellness platform offering world
             class training, the highest quality streaming and a one-on-one

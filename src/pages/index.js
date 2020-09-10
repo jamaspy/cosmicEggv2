@@ -10,10 +10,9 @@ function IndexPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`revelwell`, `ride`, `yoga`, `eve smith`, `spin class`]}
         title="Home"
       />
-
       <section className="text-center">
         <Heading />
         <About />
