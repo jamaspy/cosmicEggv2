@@ -47,7 +47,7 @@ function Header() {
         >
           {menuOptions.map((link) => (
             <Link
-              className="block mt-4 font-montserrat font-light text-white no-underline md:inline-block md:mt-0 md:ml-6 hover:text-blue-800 hover:underline "
+              className="block mt-4 font-montserrat font-light text-white no-underline md:inline-block md:mt-0 md:ml-6 hover:text-blue-800 "
               key={link.title}
               to={link.slug}
             >
@@ -57,9 +57,16 @@ function Header() {
           {isLoggedIn ? (
             isConfirmedUser && (
               <>
-                <Link to="/app/profile">Profile</Link>
+                <Link
+                  className="block mt-4 font-montserrat font-light text-white no-underline md:inline-block md:mt-0 md:ml-6 hover:text-blue-800 "
+                  to="/profile"
+                  key="profile"
+                >
+                  Profile
+                </Link>
 
                 <Link
+                  className="block mt-4 font-montserrat font-light text-white no-underline md:inline-block md:mt-0 md:ml-6 hover:text-blue-800 "
                   to="/login/"
                   onClick={(event) => {
                     event.preventDefault();
@@ -73,10 +80,18 @@ function Header() {
             )
           ) : (
             <>
-              <Link to="/signup/" key="signup">
+              <Link
+                className="block mt-4 font-montserrat font-light text-white no-underline md:inline-block md:mt-0 md:ml-6 hover:text-blue-800 "
+                to="/signup/"
+                key="signup"
+              >
                 Sign Up
               </Link>
-              <Link to="/login/" key="login">
+              <Link
+                className="block mt-4 font-montserrat font-light text-white no-underline md:inline-block md:mt-0 md:ml-6 hover:text-blue-800 "
+                to="/login/"
+                key="login"
+              >
                 Login
               </Link>
             </>

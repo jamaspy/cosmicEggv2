@@ -15,8 +15,8 @@ function IndexPage() {
       />
       <section className="text-center">
         <Heading />
-        <About />
         <Services />
+        <About />
         <Bike />
       </section>
     </Layout>

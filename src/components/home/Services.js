@@ -1,38 +1,42 @@
 import React from "react";
 import StyledTitle from "../styledComponents/StyledTitle";
-import catAndHumanIllustration from "../../images/dog-illustration.svg";
+import { MdDirectionsBike } from "react-icons/md";
+import { GrYoga } from "react-icons/gr";
+import { FiUnlock } from "react-icons/fi";
 const Services = () => {
   return (
-    <div className="bg-gray-400">
+    <div className="py-12 bg-gray-100 ">
       <StyledTitle title="What We" subtitle="Offer" />
-      <div className="flex m-auto">
-        <div className="flex-1 text-left">
-          <p>
-            RevelWell is your dedicated online wellness platform offering world
-            class training, the highest quality streaming and a one-on-one
-            dialogue with your trainer from the comfort of your own home. Ride
-            and Yoga are available 24/7, so you can train when and where suits
-            you.
+      <div className="flex flex-col sm:flex-row m-auto">
+        <div className=" flex-1 flex flex-col items-center h-full my-3 px-2">
+          <MdDirectionsBike className="text-6xl text-gray-800" />
+          <p className="text-2xl font-montserrat text-gray-800 font-light">
+            CHOOSE YOUR RIDE
           </p>
-          <p>
-            Choose from a huge selection of Rides and Yoga Flows that you can
-            access at a time that suits YOU!
-          </p>
-          <p>
-            Our purpose is to empower people with choice on how, when and where
-            they train. We offer world class training from a growing team of
-            leading wellness experts. Our vision is to create the new benchmark
-            for digital fitness and wellbeing, for people anywhere, with a focus
-            on personal and individual connection and a two-way dialogue between
-            trainer and clientele.
+          <p className=" font-montserrat text-gray-800 font-light">
+            Choose from a huge selection of rides to suit your mood and energise
+            your day
           </p>
         </div>
-        <div className="flex-1">
-          <img
-            alt="Cat and human sitting on a couch"
-            className="block w-1/2 mx-auto mb-8"
-            src={catAndHumanIllustration}
-          />
+        <div className=" flex-1 flex flex-col items-center h-full my-3 px-2">
+          <GrYoga className="text-6xl text-gray-800" />
+          <p className="text-2xl font-montserrat text-gray-800 font-light">
+            FREE YOGA
+          </p>
+          <p className=" font-montserrat text-gray-800 font-light">
+            Find your flow with guided yoga sessions. Take on a 4 part series or
+            a quick 25 minute flow. All included in your subscription
+          </p>
+        </div>
+        <div className="flex-1 flex flex-col items-center h-full my-3 px-2">
+          <FiUnlock className="text-6xl text-gray-800" />
+          <p className="text-2xl font-montserrat text-gray-800 font-light">
+            NO LOCK IN CONTRACT
+          </p>
+          <p className=" font-montserrat text-gray-800 font-light">
+            Zero Pressure, Zero Commiment. Signup today and get your first week
+            free with access to the FULL RevelWell suite
+          </p>
         </div>
       </div>
     </div>

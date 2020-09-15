@@ -3,7 +3,7 @@ import React from "react";
 import SEO from "../components/seo";
 import Video from "../components/video/video";
 
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import Layout from "../components/layout";
 
 const YogaVideoTemplate = ({ data }) => {
@@ -29,6 +29,9 @@ const YogaVideoTemplate = ({ data }) => {
               <p className="text-4xl font-montserrat font-semibold ">{title}</p>
               <p className="text-lg font-montserrat">{description}</p>
             </div>
+            <button className="my-4" onClick={() => navigate(-1)}>
+              Back to All Flows
+            </button>
           </div>
         </div>
       </Layout>

@@ -41,10 +41,7 @@ const Yoga = () => {
 
   return state.netlifyLoggedIn ? (
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Yoga"
-      />
+      <SEO keywords={[`yoga`, `flow`, `namaste`, `peaceful`]} title="Yoga" />
       <Hero img={data.allFile.nodes[0].childImageSharp.fluid}>
         <Banner home={false} title="Yoga" />
       </Hero>
@@ -61,7 +58,7 @@ const Yoga = () => {
       </div>
     </Layout>
   ) : (
-    <div>{navigate("/login/")}</div>
+    <div>{typeof window !== `undefined` ? navigate("/login/") : null}</div>
   );
 };
 

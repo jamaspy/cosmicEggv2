@@ -1,0 +1,5 @@
+.first:first-child {
+  background-color: #a7a9ac;
+  width: 50vh;
+  color: rgba(0, 0, 0, 0.863);
+}

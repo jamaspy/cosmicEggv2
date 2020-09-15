@@ -56,12 +56,13 @@ const Ride = () => {
             description={ride.description}
             slug={ride.slug}
             thumbnailID={ride?.video?.mux?.playbackId}
+            mostRecent={index === 0 ? true : false}
           />
         ))}
       </div>
     </Layout>
   ) : (
-    <div>{navigate("/login/")}</div>
+    <div>{typeof window !== `undefined` ? navigate("/login/") : null}</div>
   );
 };
 
