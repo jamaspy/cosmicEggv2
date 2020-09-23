@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import { FiLock } from "react-icons/fi";
-import Card from '../components/card'
 import Img from "gatsby-image";
 //import Hero from "../components/styledComponents/StyledHero";
 const signup = () => {
@@ -123,12 +122,7 @@ const signup = () => {
               className="bg-transparent border-b text-gray-800 font-montserrat"
             />
           </div>
-          <div id="payment" className="mt-2 " >
-            <label className="mr-4 font-montserrat font-light">
-              Payment Details
-            </label>
-            <Card className="mt-2" email={userCredentials.email} name={`${userCredentials.firstname} ${userCredentials.lastname}`}/>
-          </div>
+
           <div id="contact" className="mt-4">
             <label
               htmlFor="confirmpassword"
