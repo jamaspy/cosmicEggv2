@@ -4,7 +4,7 @@ import Hero from "../components/styledComponents/StyledHero";
 import Banner from "../components/Banner";
 import { useStaticQuery, graphql } from "gatsby";
 import SEO from "../components/seo";
-import Card from '../components/card'
+
 const ride = () => {
   const data = useStaticQuery(graphql`
     {
@@ -30,7 +30,6 @@ const ride = () => {
       <Hero img={data.allFile.nodes[0].childImageSharp.fluid}>
         <Banner home={false} title="About" />
       </Hero>
-        <Card/>
     </Layout>
   );
 };
