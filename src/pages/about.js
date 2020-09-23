@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../components/layout";
 import Hero from "../components/styledComponents/StyledHero";
 import Banner from "../components/Banner";
 import { useStaticQuery, graphql } from "gatsby";
 import SEO from "../components/seo";
 
-const ride = () => {
+const Ride = () => {
   const data = useStaticQuery(graphql`
     {
       allFile(filter: { name: { eq: "HOME_BANNER" } }) {
@@ -21,6 +21,16 @@ const ride = () => {
     }
   `);
 
+  const sayHello = async () => {
+    const res = await fetch("/hello");
+    const message = await res.json();
+    console.log(message.message);
+  };
+
+  useEffect(() => {
+    sayHello();
+  }, []);
+
   return (
     <Layout>
       <SEO
@@ -34,4 +44,4 @@ const ride = () => {
   );
 };
 
-export default ride;
+export default Ride;

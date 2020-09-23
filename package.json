@@ -28,7 +28,7 @@
     "gatsby-transformer-sharp": "^2.5.14",
     "hls.js": "^0.14.11",
     "mux-embed": "^3.3.0",
-    "netlify-cli": "^2.63.2",
+    "netlify-cli": "^2.64.0",
     "prop-types": "15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
