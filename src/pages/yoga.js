@@ -50,6 +50,7 @@ const Yoga = () => {
           <VideoCard
             key={index}
             title={flow.title}
+            yoga={true}
             description={flow.description}
             slug={flow.slug}
             thumbnailID={flow?.muxVideo?.mux?.playbackId}

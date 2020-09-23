@@ -2,12 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { navigate, Link } from "gatsby";
 import styles from "../../css/video.module.css";
+
 const VideoCard = ({ title, description, slug, thumbnailID, mostRecent }) => {
   const MUX_POSTER = `https://image.mux.com/${thumbnailID}/thumbnail.png?&fit_mode=pad&time=23`;
+
   return (
     <Link
       to={`/${slug}/`}
-      className={`${styles.first} bg-petrol border rounded-lg overflow-hidden flex justify-between flex-col items-stretch max-w-sm m-2 text-white shadow-lg`}
+      className={`${styles.first} border rounded-lg overflow-hidden flex justify-between flex-col items-stretch max-w-xs m-4 text-black shadow-lg`}
     >
       <div className="">
         <img
@@ -20,18 +22,17 @@ const VideoCard = ({ title, description, slug, thumbnailID, mostRecent }) => {
             **NEWEST RIDE**
           </div>
         )}
-        <div className="text-center text-xl px-2 font-medium font-montserrat">
+        <div className="text-center text-2xl px-2 font-light antialiased font-montserrat">
           {title}
         </div>
       </div>
-      {/* <div className="flex flex-col justify-between border max-h-full">
-        <div className="text-center text-xl font-semibold">{title}</div>
-      </div> */}
+
       <div>
         <div className="text-justify px-3 font-montserrat font-light">
           {description}
         </div>
       </div>
+
       <button
         onClick={() => navigate(`/${slug}/`)}
         className="bg-transparent hover:bg-rust text-white font-semibold font-montserrat hover:text-white py-2 px-4 hover:border-transparent mt-2"
@@ -44,6 +45,7 @@ const VideoCard = ({ title, description, slug, thumbnailID, mostRecent }) => {
 
 VideoCard.propTypes = {
   title: PropTypes.string,
+  yoga: PropTypes.boolean,
   description: PropTypes.string,
   image: PropTypes.any,
   slug: PropTypes.string,

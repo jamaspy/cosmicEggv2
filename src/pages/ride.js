@@ -56,7 +56,7 @@ const Ride = () => {
             description={ride.description}
             slug={ride.slug}
             thumbnailID={ride?.video?.mux?.playbackId}
-            mostRecent={index === 0 ? true : false}
+            mostRecent={index === 0}
           />
         ))}
       </div>

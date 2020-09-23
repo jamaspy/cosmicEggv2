@@ -19,7 +19,7 @@ function Header() {
       type: "LOG_IN",
       netlify: isLoggedIn,
       isConfirmed: isConfirmedUser,
-      user,
+      userDetails: user,
     });
   }, [isLoggedIn]);
 

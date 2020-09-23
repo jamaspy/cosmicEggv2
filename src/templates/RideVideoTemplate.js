@@ -16,8 +16,8 @@ const RideVideoTemplate = ({ data }) => {
     <Layout>
       <SEO title={title} />
       <div className=" flex items-center justify-center h-screen w-full bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-500">
-        <div className="flex flex-col items-center justify-center font-light text-gray-dark w-full text-gray-200 ">
-          <div className="mt-3 w-2/3 rounded-lg shadow-lg overflow-hidden">
+        <div className="flex flex-col items-center justify-center font-light text-gray-dark w-full text-gray-200 mt-5">
+          <div className="mt-3 w-2/3 rounded-lg overflow-hidden border-none">
             <Video
               videoSrcURL={MUX_URL}
               videoTitle={title}

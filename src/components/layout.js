@@ -6,7 +6,7 @@ import { menuOptions } from "../data/footer";
 import { Link } from "gatsby";
 const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900">
+    <div className="flex font-montserrat flex-col min-h-screen font-sans text-gray-900">
       <Header />
 
       <main className="flex-1 w-full mx-auto">{children}</main>
